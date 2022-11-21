@@ -3,7 +3,7 @@
 import os
 
 def main():        
-    startMenu = ["Make Order", "Review Order"]
+    startMenu = ["Make Order", "Review Order"] # Add more menus here
     print("Hello! What would you like to do?")
     for i in range(len(startMenu)): # Print all accessible menu in startMenu[]
         print(f"[{str(i+1)}] {startMenu[i]}")
