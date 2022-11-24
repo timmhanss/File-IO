@@ -43,3 +43,6 @@
 *.exe
 *.out
 *.app
+
+orders.txt
+csv-file.txt

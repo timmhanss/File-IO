@@ -37,17 +37,17 @@ def makeOrder():
     for _ in range(qty):
         menu.append(input("What do you want to order? "))
     
-    with open("orders.txt", "a") as f: # Open file and close after loop is done
+    with open("orders.txt", "a") as f: # Open file with append mode and close after loop is done
         for menu in sorted(menu): # Order is sorted. May or may not be needed
             print (f"You are ordering {menu}")
             f.write(f"{menu}\n") # Record the order in the file
         f.write(f"\n") # then add a newline after the final order
 
 def readOrder():
-    menu = []
+    menu = [] # Make an empty list first, this will where we append the orders.txt to the memory.
     with open("orders.txt") as f: # Open the file as f
         for line in f: # Read every line in f
-            menu.append(line.rstrip()) # then Append it on menu[] as in menu., rstrip removes the whitespace
+            menu.append(line.rstrip()) # then Append it on menu[] as in menu.; rstrip removes the whitespace
     for menu in menu:
         print(menu)
             
