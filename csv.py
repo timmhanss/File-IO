@@ -18,6 +18,7 @@ def csvReadDict():
             basket.append(cart)
             
     for cart in sorted(basket, key=lambda x: x["Food"], reverse=True): # When modifying dicts, sorted() needs a comparator. Lists doesn't need a comparator to work
+        # When using lambdas, it will return the value of key or results into the function based on is input there. In this case "Food" is used as an input to be returned.
         print(f"{cart['Food']} tastes{cart['Taste']} and looks{cart['Color']}.") # why the fuck did i add a colon - ex: {cart:['Food']}
 #main()
 csvReadDict()
